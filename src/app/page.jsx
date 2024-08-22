@@ -231,7 +231,7 @@ export default function Component() {
           />
           <label htmlFor="privacyPolicy" className="text-sm text-gray-700">
             <a
-              href="/privacy-policy"
+              href="/privacy-policy.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
