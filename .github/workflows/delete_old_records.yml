@@ -1,0 +1,15 @@
+name: Delete Old Records
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 매일 자정 UTC에 실행
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Delete Script
+        run: curl -X GET https://changwon-waste-collection-service.vercel.app/api/deleteOldRecords
