@@ -234,7 +234,7 @@ export default function Component() {
               href="/privacy-policy.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="text-indigo-600 font-bold hover:underline"
             >
               개인정보 처리방침
             </a>
