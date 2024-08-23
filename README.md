@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
 
-## Getting Started
+# 창원시 폐기물 수거 서비스 프로토타입
 
-First, run the development server:
+➡️ &nbsp; [프로젝트 보기](https://changwon-waste-collection-service.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 프로젝트 개요
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+이 프로젝트는 창원시의 폐기물 수거 서비스를 간편하게 이용할 수 있도록 하기 위한 프로토타입을 개발하는 것을 목표로 했습니다.<br> 
+주요 기능들을 하루 이틀 만에 구현할 수 있을지 검토하고, 이를 통해 빠르게 결과물을 도출하는 데 중점을 두었습니다.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 사용한 기술 스택
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js**: 빠른 서버 사이드 렌더링과 사용자 인터페이스 개발을 위해 사용.
+- **Tailwind CSS**: 빠르고 쉽게 스타일링할 수 있도록 도와주는 유틸리티 기반 CSS 프레임워크.
+- **Airtable**: 간단한 데이터베이스로서 서비스의 데이터를 관리.
+- **GitHub Actions**: 자동화된 작업 스케줄링을 통해 데이터 관리 및 유지 보수를 자동화.
 
-## Learn More
+## 구현된 기능
 
-To learn more about Next.js, take a look at the following resources:
+1. **원페이지 웹 애플리케이션**: 심플하고 직관적인 UI로 구성된 단일 페이지 애플리케이션.
+2. **Airtable 연동**: Airtable을 데이터베이스로 활용하여 데이터를 관리.
+3. **자동 데이터 삭제**: 입력된 지 1년이 지난 데이터를 매일 밤 12시에 자동으로 삭제되도록 GitHub Actions를 활용한 스케줄링.
+4. **서비스 관리자 알림**: 데이터 입력 시, 관리자에게 이메일로 알림을 보내는 기능.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 도입 가능한 추가 기능
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+구현 가능하지만 우선순위에 따라 포함하지 않은 기능:
 
-## Deploy on Vercel
+- **SMS 알림**: 데이터 입력 시, 해당 번호로 SMS 알림을 보내는 기능.
+  
+  > *해당 기능은 추가 구현이 가능하지만, 유료 결제가 필요하여 현재는 제외했습니다.*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 느낀 점
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **백엔드 복잡성 감소**: 프로토타입을 제작할 때는 복잡한 백엔드 기능보다는 빠르게 결과물을 도출하는 데 중점을 두는 것이 효율적이라는 점을 깨달았습니다.
+- **서버리스 아키텍처의 유용성**: 간단한 서비스에서는 서버리스 아키텍처가 충분히 유용하며, 관리와 유지보수 측면에서 편리했습니다.
+- **Airtable의 활용**: 초기에는 별도의 어드민 페이지가 필요할 것으로 예상했지만, Airtable을 통해 관리자도 쉽게 데이터를 관리할 수 있음을 확인했습니다.
+
+---
